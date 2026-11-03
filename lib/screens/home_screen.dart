@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_tab == 0 ? 'Find a salon' : 'My appointments'),
-        actions: [
+        actions: const [
           IconButton(
             tooltip: 'Sign out',
             icon: const Icon(Icons.logout),
@@ -32,8 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedIndex: _tab,
         onDestinationSelected: (i) => setState(() => _tab = i),
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.storefront_outlined), label: 'Salons'),
-          NavigationDestination(icon: Icon(Icons.event_note_outlined), label: 'Appointments'),
+          NavigationDestination(
+              icon: Icon(Icons.storefront_outlined), label: 'Salons'),
+          NavigationDestination(
+              icon: Icon(Icons.event_note_outlined), label: 'Appointments'),
         ],
       ),
     );
