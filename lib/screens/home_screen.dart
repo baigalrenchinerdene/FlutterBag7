@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: const [
           IconButton(
             tooltip: 'Sign out',
-            icon: const Icon(Icons.logout),
+            icon:  Icon(Icons.logout),
             onPressed: Auth.signOut,
           ),
         ],
